@@ -10,7 +10,10 @@ import { Run } from './entities/run.entity';
 export class RunController {
   constructor(private readonly runService: RunService) {}
 
-  @ApiOperation({description: "Create a new run record.",})
+  @ApiOperation({
+    description: "Create a new run record.",
+    summary: 'find all runs'
+  })
   @ApiBody({
     description: 'data',
     type: CreateRunDto,
@@ -25,7 +28,18 @@ export class RunController {
     return this.runService.create(createRunDto);
   }
 
-  @ApiOperation({description: "Retrieve all run records."})
+
+
+
+
+
+
+
+
+  @ApiOperation({
+    description: "Retrieve all run records.",
+    summary: "creata a new run and save to database",
+  })
   @ApiOkResponse({
     description: 'Retrieve all run records successfully.',
     type: Run,
@@ -36,7 +50,16 @@ export class RunController {
     return this.runService.findAll();
   }
 
-  @ApiOperation({description: "Retrieve a specific run record."})
+
+
+
+
+
+
+  @ApiOperation({
+    description: "Retrieve a specific run record.",
+    summary: "find specific run arcording to id",
+  })
   @ApiOkResponse({
     description: 'Retrieve run record successfully.',
     type: Run,
@@ -47,7 +70,10 @@ export class RunController {
     return this.runService.findOne(+id);
   }
 
-  @ApiOperation({description: "Update a specific run record."})
+  @ApiOperation({
+    description: "Update a specific run record.",
+    summary: "update specific run arcording to id"
+  })
   @ApiBody({
     description: 'Field need to be updated',
     type: UpdateRunDto,
@@ -62,7 +88,10 @@ export class RunController {
     return this.runService.update(+id, updateRunDto);
   }
 
-  @ApiOperation({description: "Delete a specific run record."})
+  @ApiOperation({
+    description: "Delete a specific run record.",
+    summary: "delete run arcording to id"
+  })
   @ApiOkResponse({
     description: 'Delete run record successfully.',
     type: Run,
