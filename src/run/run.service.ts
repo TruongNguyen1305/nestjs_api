@@ -36,7 +36,6 @@ export class RunService {
     run.description = updateRunDto.description
     run.time = new Date()
     
-    console.log(runs)
     return run
   }
 
