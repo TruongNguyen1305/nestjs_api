@@ -10,7 +10,7 @@ async function bootstrap() {
   .setTitle('RunMate API - Group 7 -Mobile Application Development')
   .setDescription('API Documentation for CRUD Run of RunMate App ')
   // .setVersion('1.0')
-  .addTag('runs')
+  // .addTag('runs')
   .build();
   
   const options: SwaggerDocumentOptions =  {
