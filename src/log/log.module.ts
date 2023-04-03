@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { LogController } from './log.controller';
-import { LogService } from './log.service';
+import { runController } from './run.controller';
+import { runService } from './run.service';
 
 @Module({
-  controllers: [LogController],
-  providers: [LogService]
+  controllers: [runController],
+  providers: [runService]
 })
-export class LogModule {}
+export class runModule {}

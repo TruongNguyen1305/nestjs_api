@@ -1,4 +1,23 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post, Put } from '@nestjs/common';
 
-@Controller('log')
-export class LogController {}
+@Controller('run')
+export class RunController {
+    constructor(private runService: RunService) {}
+
+    @Post('addrun')
+    addrun() {
+
+
+    }
+
+    @Post('editrun')
+    editrun() {
+        
+    }
+
+    @Post('deleterun')
+    deleterun() {
+        
+    }
+
+}
