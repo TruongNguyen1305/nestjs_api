@@ -1,1 +1,3 @@
-export class CreateRunDto {}
+export class CreateRunDto {
+    description: string;
+}

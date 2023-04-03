@@ -1,8 +1,18 @@
-export interface Run {
+export class Run {
+    static count = 3;
+    
     id: number;
     time: Date;
     description: string;
+
+    constructor(description: string) {
+        this.id = Run.count + 1;
+        Run.count += 1;
+        this.time = new Date();
+        this.description = description;
+    }
 }
+
 
 
 export const runs: Run[] = [
