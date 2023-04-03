@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { LogModule } from './log/log.module';
+import { RunModule } from './run/run.module';
 
 @Module({
-  imports: [LogModule],
+  imports: [RunModule],
 })
 export class AppModule {}
