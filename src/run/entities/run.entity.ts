@@ -1,8 +1,14 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class Run {
     static count = 3;
-    
+    @ApiProperty()
     id: number;
+
+    @ApiProperty()
     time: Date;
+
+    @ApiProperty()
     description: string;
 
     constructor(description: string) {
